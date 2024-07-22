@@ -1,0 +1,239 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 10%;
+  align-items: center;
+  width: 80%;
+  margin: 4% 0% 3% 12%;
+}
+
+.header h1 {
+  font-size: 24px;
+  margin: 0;
+}
+.delete-date {
+  width: 37%;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 3%;
+}
+.delete-all {
+  cursor: pointer;
+  width: 40%;
+  margin-top: 4%;
+  color: #f00;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.date {
+  width: 100%;
+  display: block;
+  text-align: right;
+  color: #251814;
+  font-size: 14px;
+  margin: 4% 0 0 0;
+}
+
+.tasks {
+  width: 60%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0.5% 0 0 3%;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.task-checkbox {
+  margin-right: 2%;
+}
+
+.task.active {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task.completed {
+  background-color: #edb046;
+}
+
+.task input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.completed-tasks,
+.active-tasks {
+  text-align: center;
+  font-size: 24px;
+}
+
+.percentage {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.label {
+  font-size: 14px;
+  color: #888;
+}
+
+.task-statistics {
+  display: flex;
+  height: 50%;
+  justify-content: space-evenly;
+  column-gap: 2%;
+}
+
+.stats-container {
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+  height: 313px;
+}
+
+.stats-container-mobile {
+  display: none;
+}
+
+.stat-card {
+  width: 100%;
+  height: 100%;
+  border-radius: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.completed-tasks {
+  background-color: #ba5112;
+}
+
+.active-tasks {
+  background-color: #edb046;
+}
+
+.icon {
+  width: 30%;
+  height: 30%;
+  margin-bottom: 1%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.completed-icon {
+  background-image: url("/assets/dashboard/Check_Icon.svg"); /* Replace with your actual icon path */
+}
+
+.active-icon {
+  background-image: url("/assets/dashboard/Time_Icon.svg"); /* Replace with your actual icon path */
+}
+
+h2 {
+  font-size: 100%;
+  margin: 0;
+}
+
+p {
+  font-size: 60%;
+  margin: 0px 0 2% 0;
+  text-wrap: nowrap;
+}
+
+@media only screen and (min-width: 200px) and (max-width: 426px) {
+  .stats-container-mobile {
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    margin: 10% 0 5% 14%;
+  }
+
+  .stat-card {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .icon-mobile {
+    width: 30%;
+    height: 2rem;
+    margin-bottom: 1%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .percentage-container {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    align-items: baseline;
+    column-gap: 2%;
+  }
+
+  h2 {
+    font-size: 0.9rem;
+    margin: 0.4rem;
+  }
+
+  p {
+    font-size: 0.3em;
+    margin: 0px 0 4% 0;
+    text-wrap: nowrap;
+  }
+
+  .stats-container {
+    display: none;
+  }
+
+  .tasks {
+    width: 80%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0.5% 0 0 3%;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 10%;
+    align-items: center;
+    width: 80%;
+    margin: 6% 0% 3% 12%;
+  }
+
+  .header h1 {
+    font-size: 0.9rem;
+    text-wrap: nowrap;
+  }
+
+  .delete-all {
+    font-size: 0.5rem;
+    text-wrap: nowrap;
+  }
+
+  .date {
+    font-size: 0.5rem;
+    text-wrap: nowrap;
+  }
+
+  .delete-date {
+    width: 56%;
+  }
+}

@@ -1,0 +1,30 @@
+.delete-confirmation-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-radius: 10px;
+}
+
+.ok-btn,
+.cancel-btn {
+  margin: 15% 10% 10% 10%;
+  width: 25%;
+  height: 6vh;
+  border-style: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.ok-btn {
+  background-color: #edb046;
+}
+
+.cancel-btn {
+  background-color: #ba5112;
+}

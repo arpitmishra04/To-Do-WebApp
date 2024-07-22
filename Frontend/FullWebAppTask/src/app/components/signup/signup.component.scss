@@ -1,0 +1,131 @@
+:host {
+    display: block;
+    height: 100vh;
+    background-image: url('/assets/authentication/background.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+h1{
+    color: #fff;
+    font-size: 40px;
+}
+h6{
+    color: #fff;
+}
+.container {
+    background-color: #EDB046;
+    width: 40%;
+    height: 25rem;
+    text-align: center;
+    position: absolute;
+    left:30%;
+    top:10%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+form{
+   margin-top: 10%;
+}
+
+.sign-in-box {
+    text-align: center;
+}
+
+
+.sign-in-box form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sign-in-box label {
+    margin-top: 10px;
+    color: #251814;
+}
+
+.sign-in-box input {
+    margin-top: 2%;
+    margin-bottom: 5%;
+    padding: 10px;
+    width: 80%;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+input::placeholder{
+    color: #B5B5B5;
+}
+.sign-in-box button {
+    margin: 4% 0 0 0;
+    padding: 10px 20px;
+    background-color: #BA5112;
+    color: #251814;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.signin-hyperlink-container{
+    margin-top: 10px;
+    font-size: small;
+}
+.signin-hyperlink{
+    text-decoration: none;
+    cursor: pointer;
+    color: #BA5112;
+}
+.password-container{
+    position: relative;
+    width: 100%;
+}
+
+.eye{
+    position: absolute;
+    bottom:37%;
+    right: 15%;
+}
+
+button[class='btn-signUp']{
+    color: #fff;
+}
+
+
+@media only screen and (max-width:426px){
+
+    .container{
+        width: 72%;
+        left: 16%;
+        height: 20rem;
+    }
+    .eye{
+        width: 10%;
+    }
+
+    input::placeholder{
+        font-size: 80%;
+    }
+} 
+
+
+@media only screen and (min-height:1000px){
+
+    
+    .container{
+        width: 72%;
+        left: 16%;
+        height: 30rem;
+    }
+} 
+
+@media only screen and (min-width:1000px)and (min-height:600px){
+
+    .container{
+        width: 52%;
+        left: 25%;
+        height: 30rem;
+    }
+}

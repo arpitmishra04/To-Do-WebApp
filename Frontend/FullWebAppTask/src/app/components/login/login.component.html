@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="sign-in-box">
+    <!-- Add your specific SVG content here -->
+
+    <h1>To-Do App</h1>
+    <h6>Start organizing your life day by day</h6>
+    <form (ngSubmit)="login()">
+      <input
+        type="text"
+        id="username"
+        [(ngModel)]="username"
+        name="username"
+        required
+        placeholder="Enter your username"
+      />
+
+      <div class="password-container">
+        <input
+          id="password"
+          [(ngModel)]="password"
+          name="password"
+          [type]="isPasswordVisible ? 'text' : 'password'"
+          required
+          placeholder="Enter your password"
+        />
+        <img
+          class="eye"
+          (click)="toggleActive()"
+          [src]="'assets/authentication/' + src + '.svg'"
+          alt="eye"
+        />
+      </div>
+      <button class="btn-signin" type="submit">Sign In</button>
+    </form>
+    <p class="signup-hyperlink-container">
+      <b>
+        Don’t have an account? Create
+        <a class="signup-hyperlink" routerLink="/signup">here</a>.
+      </b>
+    </p>
+  </div>
+</div>

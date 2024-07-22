@@ -1,0 +1,60 @@
+<div class="stats-container-mobile">
+  <div class="stat-card completed-tasks">
+    <div class="icon-mobile completed-icon"></div>
+    <div class="percentage-container">
+      <h2>{{ competedTasks }}%</h2>
+      <p>Completed tasks</p>
+    </div>
+  </div>
+  <div class="stat-card active-tasks">
+    <div class="icon-mobile active-icon"></div>
+    <div class="percentage-container">
+      <h2>{{ activeTasks }}%</h2>
+      <p>Active tasks</p>
+    </div>
+  </div>
+</div>
+<div class="header">
+  <h1>Today's Tasks</h1>
+  <div class="delete-date">
+    <a class="delete-all" (click)="openDialog()">Delete All</a>
+    <span class="date">{{ currentDate | date : "EEEE, d MMMM y" }}</span>
+  </div>
+</div>
+<div class="task-statistics">
+  <ul class="tasks">
+    <li
+      *ngFor="let task of todotasks"
+      [ngClass]="getClass(task.isCompleted)"
+      class="task"
+    >
+      <img
+        class="task-checkbox"
+        [src]="getSrc(task.isCompleted)"
+        alt="completed task"
+        (click)="toggleActive(task)"
+      />
+      <span>
+        {{ task.taskName }}
+      </span>
+      <app-delete-confirmation-dialog
+        *ngIf="showDialog"
+        (confirmDelete)="handleConfirmDelete($event)"
+        [isDashboard]="true"
+      ></app-delete-confirmation-dialog>
+    </li>
+  </ul>
+
+  <div class="stats-container">
+    <div class="stat-card completed-tasks">
+      <div class="icon completed-icon"></div>
+      <h2>{{ competedTasks }}%</h2>
+      <p>Completed tasks</p>
+    </div>
+    <div class="stat-card active-tasks">
+      <div class="icon active-icon"></div>
+      <h2>{{ activeTasks }}%</h2>
+      <p>Active tasks</p>
+    </div>
+  </div>
+</div>

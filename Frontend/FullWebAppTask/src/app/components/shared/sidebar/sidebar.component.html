@@ -1,0 +1,65 @@
+<div class="sidebar">
+  <h1 class="title">To-Do App</h1>
+  <button class="add-task-btn" (click)="openModal()">
+    <span>Add Task</span>
+    <img class="add-logo" src="assets/sidebar/Add.svg" alt="" />
+  </button>
+  <ul class="sidebar-nav">
+    <li
+      class="nav-item"
+      routerLink="dashboard"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      Dashboard
+    </li>
+    <li
+      class="nav-item"
+      routerLink="active"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      Active
+    </li>
+    <li
+      class="nav-item"
+      routerLink="completed"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      Completed
+    </li>
+  </ul>
+
+  <div class="nav-dropdown-setup">
+    <button
+      (focus)="toggleDropdown()"
+      (blur)="toggleDropdown()"
+      class="dropdown-button"
+    >
+      <span>
+        {{ activeLink.label }}
+        <img
+          class="dropdown-image"
+          src="assets/dashboard/arrow-down-vector.svg"
+          alt="arrow down"
+      /></span>
+    </button>
+    <div [class.show]="dropdownOpen" class="nav-container">
+      <ul class="nav">
+        <li
+          class="nav-item"
+          *ngFor="let link of nonActiveLinks"
+          [routerLink]="link.url"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          (click)="setActiveLink(link)"
+        >
+          {{ link.label }}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <app-add-task [isOpen]="isModalOpen" (close)="closeModal()"></app-add-task>
+</div>

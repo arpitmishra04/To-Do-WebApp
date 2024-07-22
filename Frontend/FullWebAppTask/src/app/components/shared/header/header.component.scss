@@ -1,0 +1,86 @@
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+}
+
+.title {
+    font-size: 24px;
+    color: #3e3e3e;
+}
+
+.add-task-btn {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width:30%; 
+    background-color: #fff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 1px 0px 14px 3px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+    color: #251814;
+    cursor: pointer;
+  }
+  .add-logo {
+    margin-left: 8px;
+    width: 15%;
+  }
+
+.sign-out {
+    background-color:#BA5112;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    margin-left: 60%;
+    align-items: center;
+    border-radius: 5px;
+    text-wrap: nowrap;
+}
+
+.sign-out .icon {
+    margin-left: 8px;
+}
+.logo{
+    display: none;
+    width: 45%;
+}
+
+@media only screen and (min-width:200px) and (max-width:426px){
+    
+    .logo{
+        display: block;
+        width: 34%;
+    }
+    div[class="title"]{
+        display: none;
+    }
+     
+    .add-task-btn{
+        display: flex;
+        text-wrap: nowrap;
+    }
+    .sign-out{
+        width: 25%;
+        padding: 10px 10px;
+        font-size: 70%;
+        text-wrap: nowrap;
+        margin-left: 0%;
+    }
+
+    .sign-out .icon {
+        margin-left: 4%;
+        width: 0.8rem;
+       
+    }
+
+    
+}

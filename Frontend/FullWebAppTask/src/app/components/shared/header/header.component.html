@@ -1,0 +1,14 @@
+<div class="header">
+  <img class="logo" src="assets/sidebar/Logo.svg" alt="logo" />
+  <div class="title">{{ title }}</div>
+  <button class="add-task-btn" (click)="openModal()">
+    <span>Add Task</span>
+    <img class="add-logo" src="assets/sidebar/Add.svg" alt="" />
+  </button>
+  <button class="sign-out" (click)="logout()" routerLink="/">
+    Sign out
+    <img class="icon" src="assets/header/signout.svg" alt="signout" />
+  </button>
+
+  <app-add-task [isOpen]="isModalOpen" (close)="closeModal()"></app-add-task>
+</div>
